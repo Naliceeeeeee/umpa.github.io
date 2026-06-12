@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Admin dashboard for UMPA uploads.">
+<title>Admin Dashboard | UMPA</title>
+<link rel="shortcut icon" href="./Assets/images/logo.png" type="img/png" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Lora:ital,wght@0,500;0,600;0,700;1,500&family=Merriweather:wght@400;700&family=Open+Sans:wght@400;600;700&family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+<script>
+(function () {
+  var stored = localStorage.getItem('umpa-theme') || 'default';
+  var legacy = { light: 'default', dark: 'black', contrast: 'default' };
+  var valid = { default: 1, green: 1, red: 1, black: 1 };
+  var theme = valid[stored] ? stored : (legacy[stored] || 'default');
+  var font = localStorage.getItem('umpa-font') || 'poppins';
+  document.documentElement.setAttribute('data-theme', theme);
+  document.documentElement.setAttribute('data-font', font);
+})();
+</script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+<link rel="stylesheet" href="css/style.css" />
+</head>
+<body class="admin-dashboard-page">
+  <main class="admin-dashboard-main">
+    <header class="admin-dashboard-header">
+      <div>
+        <p class="admin-auth-eyebrow">UMPA Admin</p>
+        <h1>Content Dashboard</h1>
+        <p class="admin-auth-subtext">Upload and manage Programs, Events, Gallery, Resources, Testimonials, and each program page.</p>
+      </div>
+      <button type="button" id="adminLogoutBtn" class="life-cta-btn life-cta-btn--outline">Logout</button>
+    </header>
+
+    <section class="admin-dashboard-card">
+      <h2>Add New Content</h2>
+      <form id="adminContentForm" class="admin-dashboard-form" autocomplete="off">
+        <label>
+          Content Type
+          <select id="adminType" required>
+            <option value="programs">Programs</option>
+            <option value="awareness-campaigns">Awareness Campaigns</option>
+            <option value="pro-life-clubs">Pro-Life Clubs</option>
+            <option value="counseling-family-guidance">Counseling &amp; Family Guidance</option>
+            <option value="natural-family-planning">Natural Family Planning</option>
+            <option value="charity-outreach">Charity Outreach</option>
+            <option value="training-programs">Training Programs</option>
+            <option value="events">Events</option>
+            <option value="gallery">Gallery</option>
+            <option value="resources">Resources</option>
+            <option value="testimonials">Testimonials</option>
+          </select>
+        </label>
+        <label>
+          <span id="adminTitleLabel">Title</span>
+          <input type="text" id="adminTitle" required />
+        </label>
+        <label id="adminRoleWrap" hidden>
+          Role / title (e.g. Student Club Leader)
+          <input type="text" id="adminRole" placeholder="Student Club Leader" />
+        </label>
+        <label>
+          <span id="adminDescriptionLabel">Description</span>
+          <textarea id="adminDescription" rows="4" placeholder="Short summary..."></textarea>
+        </label>
+        <label id="adminEventDateWrap">
+          Event Date (for Events)
+          <input type="date" id="adminEventDate" />
+        </label>
+        <label>
+          Link URL (optional)
+          <input type="url" id="adminLink" placeholder="https://..." />
+        </label>
+        <label>
+          Upload file / image (optional)
+          <input type="file" id="adminFile" accept=".pdf,.doc,.docx,image/*" />
+          <span class="admin-field-hint" id="adminFileHint">For Resources, upload a PDF or document, or paste a download link above.</span>
+        </label>
+        <label>
+          Image URL (optional, for gallery/program cards)
+          <input type="url" id="adminImageUrl" placeholder="https://..." />
+        </label>
+        <button type="submit" class="btn-primary">Save Content</button>
+        <p id="adminFormStatus" class="admin-form-status" hidden></p>
+      </form>
+    </section>
+
+    <section class="admin-dashboard-card">
+      <div class="admin-dashboard-list-head">
+        <h2>Saved Items</h2>
+        <button type="button" id="adminClearAllBtn" class="life-cta-btn life-cta-btn--outline">Clear All</button>
+      </div>
+      <div id="adminItemsList" class="admin-items-list"></div>
+    </section>
+  </main>
+  <script src="js/script.js" defer></script>
+</body>
+</html>
