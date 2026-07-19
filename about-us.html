@@ -1,17 +1,21 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="About UMPA — who we are, leadership, and what we do.">
+<meta name="description" content="About UMPA — who we are, team, and what we do.">
 <title>About Us | UMPA</title>
 <link rel="shortcut icon" href="./Assets/images/logo.png" type="img/png" />
+<link rel="shortcut icon" href="pasted_file_OtfQNi_image_a5ba3799.png" type="image/png" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Lora:ital,wght@0,500;0,600;0,700;1,500&family=Merriweather:wght@400;700&family=Open+Sans:wght@400;600;700&family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
 <script>
 (function () {
-  var theme = localStorage.getItem('umpa-theme') || 'default';
+  var stored = localStorage.getItem('umpa-theme') || 'default';
+  var legacy = { light: 'default', dark: 'black', contrast: 'default' };
+  var valid = { default: 1, green: 1, red: 1, black: 1 };
+  var theme = valid[stored] ? stored : (legacy[stored] || 'default');
   var font = localStorage.getItem('umpa-font') || 'poppins';
   document.documentElement.setAttribute('data-theme', theme);
   document.documentElement.setAttribute('data-font', font);
@@ -27,14 +31,12 @@
 <div class="topbar">
   <div class="topbar-left">
     <a href="mailto:prolife.klarch@yahoo.com"><i class="fa-regular fa-envelope"></i> prolife.klarch@yahoo.com</a>
-    <a href="contact.html"><i class="fa-solid fa-location-dot"></i> Kampala Lubaga Hill, adjacent to St. Mary's Cathedral Rubaga</a>
     <a href="contact.html"><i class="fa-solid fa-user"></i> Login</a>
   </div>
   <div class="topbar-right">
-    <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
-    <a href="https://wa.me/256785566505" aria-label="WhatsApp" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-whatsapp"></i></a>
-    <a href="#" aria-label="X"><i class="fa-brands fa-x-twitter"></i></a>
-    <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+    <a href="https://www.facebook.com/profile.php?id=100064422140843&amp;mibextid=rS40aB7S9Ucbxw6v" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+    <a href="https://x.com/ProlifeUmpa" target="_blank" rel="noopener noreferrer" aria-label="X"><i class="fa-brands fa-x-twitter"></i></a>
+    <a href="https://www.youtube.com/channel/UC00grETNPLlj9aXZJGh-7sA" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
   </div>
 </div>
 
@@ -42,7 +44,6 @@
 <nav>
   <div class="logo">
     <a href="index.html" class="logo-link">
-      
       <img src="dycss-logo.jpeg" alt="UMPA Logo">
       <img src="pasted_file_OtfQNi_image_a5ba3799.png" alt="UMPA Logo">
       <span class="logo-text"><strong>UMPA</strong><span class="logo-tagline">Uganda Martyrs Pro-life Apostolate</span></span>
@@ -52,22 +53,7 @@
   <ul id="menu">
     <li><a href="index.html">Home</a></li>
     <li><a href="about-us.html">About Us</a></li>
-    <li class="nav-has-dropdown">
-      <span class="nav-label">
-        <a href="programs.html" class="nav-parent-link">Programs</a>
-        <button type="button" class="nav-caret-btn" aria-label="Toggle Programs menu" aria-expanded="false">
-          <i class="fa-solid fa-chevron-down nav-caret" aria-hidden="true"></i>
-        </button>
-      </span>
-      <ul class="nav-dropdown">
-        <li><a href="awareness-campaigns.html">Awareness Campaigns</a></li>
-        <li><a href="pro-life-clubs.html">Pro-Life Clubs</a></li>
-        <li><a href="counseling-family-guidance.html">Counseling &amp; Family Guidance</a></li>
-        <li><a href="natural-family-planning.html">Natural Family Planning</a></li>
-        <li><a href="charity-outreach.html">Charity Outreach</a></li>
-        <li><a href="training-programs.html">Training Programs</a></li>
-      </ul>
-    </li>
+    <!-- Programs menu removed -->
     <li class="nav-has-dropdown">
       <span class="nav-label">
         <a href="upcoming-events.html" class="nav-parent-link">Events &amp; Gallery</a>
@@ -193,7 +179,7 @@
 <main class="page-main">
   <section class="page-banner page-banner--blend">
     <div class="page-banner-photo" aria-hidden="true">
-      <img src="imgs/imgg/abouttt.jpeg" alt="" loading="eager" />
+      <img src="imgs/use.jpeg" alt="" loading="eager" />
     </div>
     <div class="page-banner-inner">
       <p class="page-breadcrumb"><a href="index.html">Home</a> / About Us</p>
@@ -274,37 +260,83 @@
   </section>
 
 
-  <section class="page-block page-block--alt" id="who-we-are">
+  <section class="page-block page-block--alt" id="background">
     <div class="page-block-inner page-prose">
-      <h2 class="page-section-title">Who We Are</h2>
-      <p>Uganda Martyrs Pro-life Apostolate (UMPA) is an organization that promotes and defends human life from the moment of conception until natural death. The organization was founded in the Archdiocese of Kampala in April 2008 under Archbishop Dr. Cyprian Kizito Lwanga.</p>
-      <p>The right to life is the most fundamental human right from which all others flow. Like all believers in the one God, we believe that life is sacred, a gift from God and should be protected as such since life has its authentic origin in God. UMPA exists to promote and defend this life and the institution of marriage consisting of one man (XY) and one woman (XX), basing on the holy scriptures that say &ldquo;God created man in the image of himself, in the image of God he created him; male and female he created them.&rdquo; (Genesis 1:26&ndash;27)</p>
+      <h2 class="page-section-title">Background</h2>
+      <p>Uganda Martyrs Pro-life Apostolate (UMPA) is a Christian organization that promotes and defends human life from conception until natural death.</p>
+      <p>UMPA was founded by Archbishop Dr. Cyprian Kizito Lwanga in response to the growing culture of death and high rates of abortion in Uganda.</p>
+      <p>The organization addresses all behaviors and practices that put the dignity of the human person at risk; these include:</p>
+      <ul class="background-issues-list">
+        <li>Abortion</li>
+        <li>Homosexuality</li>
+        <li>Suicide</li>
+        <li>Drugs and substance abuse</li>
+        <li>Human sacrifice</li>
+        <li>Mob justice</li>
+        <li>Sexual immorality</li>
+        <li>Defilement</li>
+        <li>Euthanasia</li>
+        <li>Pornography</li>
+        <li>Rape</li>
+        <li>Artificial Reproductive Technologies</li>
+        <li>And other behaviours that promote the culture of death</li>
+      </ul>
     </div>
   </section>
 
-  <section class="page-block" id="background">
+  <section class="page-block" id="who-we-reach">
     <div class="page-block-inner page-prose">
-      <h2 class="page-section-title">Background</h2>
-      <p>Uganda Martyrs Pro-life Apostolate (UMPA) is a Christian organisation that promotes and defends human life from conception until natural death.</p>
-      <p>The right to life is the most fundamental human right from which all others flow. We believe that life is sacred, a gift from God and should be protected as such since life has its authentic origin in God. The Organisation addresses all behaviours and practices that put the dignity of the human person at risk. These include:</p>
-      <ul class="background-issues-list">
-        <li>Abortion</li>
-        <li>Drug and substance abuse</li>
-        <li>Homosexuality</li>
-        <li>Environmental degradation</li>
-        <li>Suicide</li>
-        <li>Euthanasia</li>
-        <li>Human sacrifice</li>
-        <li>Pornography</li>
-        <li>Mob justice</li>
-        <li>Domestic violence</li>
-        <li>Sexual immorality</li>
-        <li>Rape</li>
-        <li>Defilement</li>
-        <li>Artificial reproductive technologies</li>
-        <li>Other behaviours that promote the culture of death</li>
-      </ul>
-      <p>UMPA was founded by Archbishop Dr. Cyprian Kizito Lwanga of Kampala Archdiocese in 2008. This was in response to the high rates of abortion in Uganda [according to Singh et al (2005), an estimated 297,000 abortions per year were being performed]. This meant that every 2 minutes an unborn baby was being brutally murdered through abortion. The problem of abortion and other anti-life practices are increasing at an alarming rate.</p>
+      <h2 class="page-section-title">Who We Reach</h2>
+      <p>We meet audiences from different age groups, education status, and religious affiliations. The aim is to empower the young and old to choose to uphold morals.</p>
+      
+      <div class="umpa-custom-table-wrapper mt-4">
+        <table class="umpa-custom-table">
+          <thead>
+            <tr>
+              <th scope="col" style="width: 35%;">Target Group</th>
+              <th scope="col">Details &amp; Context</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                <div class="d-flex align-items-center">
+                  <i class="fa-solid fa-graduation-cap table-icon" style="color: #8f0f0f; font-size: 1.1rem; width: 24px; margin-right: 12px;"></i>
+                  <strong>Primary &amp; Secondary Schools</strong>
+                </div>
+              </td>
+              <td>Empowering pupils and students with moral guidance and pro-life values early in their development.</td>
+            </tr>
+            <tr>
+              <td>
+                <div class="d-flex align-items-center">
+                  <i class="fa-solid fa-university table-icon" style="color: #04408a; font-size: 1.1rem; width: 24px; margin-right: 12px;"></i>
+                  <strong>Tertiary Institutions &amp; Universities</strong>
+                </div>
+              </td>
+              <td>Establishing pro-life youth clubs and mentoring young adults through interactive debates.</td>
+            </tr>
+            <tr>
+              <td>
+                <div class="d-flex align-items-center">
+                  <i class="fa-solid fa-church table-icon" style="color: #8f0f0f; font-size: 1.1rem; width: 24px; margin-right: 12px;"></i>
+                  <strong>Churches &amp; Parishes</strong>
+                </div>
+              </td>
+              <td>Providing spiritual nourishment, moral formation, and support within parishes, houses of formation, and faith communities.</td>
+            </tr>
+            <tr>
+              <td>
+                <div class="d-flex align-items-center">
+                  <i class="fa-solid fa-briefcase table-icon" style="color: #04408a; font-size: 1.1rem; width: 24px; margin-right: 12px;"></i>
+                  <strong>Corporate &amp; Workplaces</strong>
+                </div>
+              </td>
+              <td>Engaging professional groups and corporate spaces in dialogues concerning human dignity.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
     </div>
   </section>
 
@@ -313,79 +345,41 @@
       <h2 class="page-section-title">What We Do</h2>
       <p>Uganda Martyrs Pro-life Apostolate (UMPA) organizes and conducts awareness campaigns targeting diverse groups and forms pro-life youth clubs. We empower people to embrace moral values through educative talks and videos.</p>
       <p>Our sessions are very interactive: we discuss with people and, whenever possible, encourage them to debate different moral issues. We always encourage question-and-answer sessions to allow for clarity.</p>
-      <p><a href="programs.html">Explore our programs and outreach →</a></p>
     </div>
   </section>
-
-
-  <section class="core-values-section" id="core-values">
-    <div class="core-values-inner">
-      <header class="core-values-header">
-        <h2 class="core-values-title">Our Core Values</h2>
-        <span class="core-values-accent" aria-hidden="true"></span>
-      </header>
-      <div class="core-values-grid">
-        <article class="core-values-card">
-          <div class="core-values-icon" aria-hidden="true"><i class="fa-solid fa-user-shield"></i></div>
-          <h3>Human Dignity</h3>
-          <p>Every human person has inherent worth as created in the image of God.</p>
-        </article>
-        <article class="core-values-card">
-          <div class="core-values-icon" aria-hidden="true"><i class="fa-solid fa-heart-pulse"></i></div>
-          <h3>Right to Life for Every Human Being</h3>
-          <p>The right to life belongs to every human being from conception until natural death.</p>
-        </article>
-        <article class="core-values-card">
-          <div class="core-values-icon" aria-hidden="true"><i class="fa-solid fa-hands-holding-child"></i></div>
-          <h3>Respect for Human Life</h3>
-          <p>Honoring every human life as sacred and worthy of protection.</p>
-        </article>
-        <article class="core-values-card">
-          <div class="core-values-icon" aria-hidden="true"><i class="fa-solid fa-shield-halved"></i></div>
-          <h3>Integrity</h3>
-          <p>Acting with honesty, faithfulness, and moral courage in all we do.</p>
-        </article>
-        <article class="core-values-card">
-          <div class="core-values-icon" aria-hidden="true"><i class="fa-solid fa-heart"></i></div>
-          <h3>Love and Compassion</h3>
-          <p>Serving others with Christ-like love, mercy, and compassionate care.</p>
-        </article>
-      </div>
-    </div>
-  </section>
-
 
   <section class="page-block page-block--alt" id="leadership">
-       <article class="leadership-founder">
+    <div class="page-block-inner page-prose">
+      <h2 class="page-section-title">Team</h2>
+      <p>UMPA is supported by a committed team of coordinators, chaplains, and volunteer leaders who guide programs across parishes, schools, and communities in Uganda.</p>
+
+      <article class="leadership-founder">
         <div class="leadership-founder-badge">Founder</div>
         <h3>Archbishop Dr. Cyprian Kizito Lwanga</h3>
         <p class="leadership-role">Founder, Uganda Martyrs Pro-life Apostolate</p>
         <p>UMPA was founded in 2008 under his leadership as Archbishop of Kampala, in response to the growing culture of death and high rates of abortion in Uganda.</p>
       </article>
-    <div class="page-block-inner page-prose">
-      <h2 class="page-section-title">Leadership</h2>
-      <p>UMPA is led by committed coordinators, chaplains, and volunteer leaders who guide programs across parishes, schools, and communities in Uganda.</p>
-
-   
 
       <div class="leadership-team">
-        <article class="leadership-card">
-          <div class="leadership-card-icon" aria-hidden="true"><i class="fa-solid fa-user-tie"></i></div>
-          <h3>Dr. Sandra Nabachwa</h3>
-          <p class="leadership-role">Director</p>
-          <p class="leadership-contact"><i class="fa-solid fa-phone" aria-hidden="true"></i> <a href="tel:+256782568460">+256 782 568 460</a></p>
-        </article>
-        <article class="leadership-card">
-          <div class="leadership-card-icon" aria-hidden="true"><i class="fa-solid fa-user-pen"></i></div>
-          <h3>Ms. Resty Ingabire</h3>
-          <p class="leadership-role">General Secretary / Counselor</p>
-          <p class="leadership-contact"><i class="fa-solid fa-phone" aria-hidden="true"></i> <a href="tel:+256772481938">+256 772 481 938</a></p>
-        </article>
         <article class="leadership-card">
           <div class="leadership-card-icon" aria-hidden="true"><i class="fa-solid fa-cross"></i></div>
           <h3>Rev. Fr. Charles Lwanga Makoboza</h3>
           <p class="leadership-role">Chaplain</p>
-          <p class="leadership-contact"><i class="fa-solid fa-phone" aria-hidden="true"></i> <a href="tel:+256705299750">+256 705 299 750</a></p>
+        </article>
+        <article class="leadership-card">
+          <div class="leadership-card-icon" aria-hidden="true"><i class="fa-solid fa-user-tie"></i></div>
+          <h3>Dr. Sandra Nabachwa</h3>
+          <p class="leadership-role">Director</p>
+        </article>
+        <article class="leadership-card">
+          <div class="leadership-card-icon" aria-hidden="true"><i class="fa-solid fa-hand-holding-heart"></i></div>
+          <h3>Ms. Resty Ingabire</h3>
+          <p class="leadership-role">Psychosocial Support Officer</p>
+        </article>
+        <article class="leadership-card">
+          <div class="leadership-card-icon" aria-hidden="true"><i class="fa-solid fa-clipboard-list"></i></div>
+          <h3>Ms. Josephine Kagogwe</h3>
+          <p class="leadership-role">Program Officer</p>
         </article>
       </div>
 
@@ -404,7 +398,7 @@
           <ul>
             <li><a href="index.html">Home</a></li>
             <li><a href="about-us.html">About Us</a></li>
-            <li><a href="programs.html">Programs</a></li>
+            <li><a href="about-us.html#programs">Programs</a></li>
             <li><a href="upcoming-events.html">Events &amp; Gallery</a></li>
             <li><a href="resources.html">Resources</a></li>
             <li><a href="join-club.html">Get Involved</a></li>
@@ -414,9 +408,9 @@
         <div class="footer-col">
           <h4>Follow Us</h4>
           <ul>
-            <li><a class="social-link" href="#"><i class="fa-brands fa-facebook"></i> Facebook</a></li>
-            <li><a class="social-link" href="#"><i class="fa-brands fa-x-twitter"></i> Twitter</a></li>
-            <li><a class="social-link" href="https://wa.me/256785566505"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a></li>
+            <li><a class="social-link" href="https://www.facebook.com/profile.php?id=100064422140843&amp;mibextid=rS40aB7S9Ucbxw6v" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-facebook"></i> Facebook</a></li>
+            <li><a class="social-link" href="https://x.com/ProlifeUmpa" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-x-twitter"></i> Twitter</a></li>
+            <li><a class="social-link" href="https://www.youtube.com/channel/UC00grETNPLlj9aXZJGh-7sA" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-youtube"></i> YouTube</a></li>
           </ul>
         </div>
         <div class="footer-col">
