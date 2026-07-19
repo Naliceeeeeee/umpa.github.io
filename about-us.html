@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="About UMPA — who we are, team, and what we do.">
+<title>About Us | UMPA</title>
+<link rel="shortcut icon" href="./Assets/images/logo.png" type="img/png" />
+<link rel="shortcut icon" href="pasted_file_OtfQNi_image_a5ba3799.png" type="image/png" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Lora:ital,wght@0,500;0,600;0,700;1,500&family=Merriweather:wght@400;700&family=Open+Sans:wght@400;600;700&family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+<script>
+(function () {
+  var stored = localStorage.getItem('umpa-theme') || 'default';
+  var legacy = { light: 'default', dark: 'black', contrast: 'default' };
+  var valid = { default: 1, green: 1, red: 1, black: 1 };
+  var theme = valid[stored] ? stored : (legacy[stored] || 'default');
+  var font = localStorage.getItem('umpa-font') || 'poppins';
+  document.documentElement.setAttribute('data-theme', theme);
+  document.documentElement.setAttribute('data-font', font);
+})();
+</script>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+<link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+<!-- TOP BAR -->
+<div class="topbar">
+  <div class="topbar-left">
+    <a href="mailto:prolife.klarch@yahoo.com"><i class="fa-regular fa-envelope"></i> prolife.klarch@yahoo.com</a>
+    <a href="contact.html"><i class="fa-solid fa-user"></i> Login</a>
+  </div>
+  <div class="topbar-right">
+    <a href="https://www.facebook.com/profile.php?id=100064422140843&amp;mibextid=rS40aB7S9Ucbxw6v" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+    <a href="https://x.com/ProlifeUmpa" target="_blank" rel="noopener noreferrer" aria-label="X"><i class="fa-brands fa-x-twitter"></i></a>
+    <a href="https://www.youtube.com/channel/UC00grETNPLlj9aXZJGh-7sA" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+  </div>
+</div>
+
+<!-- NAV -->
+<nav>
+  <div class="logo">
+    <a href="index.html" class="logo-link">
+      <img src="dycss-logo.jpeg" alt="UMPA Logo">
+      <img src="pasted_file_OtfQNi_image_a5ba3799.png" alt="UMPA Logo">
+      <span class="logo-text"><strong>UMPA</strong><span class="logo-tagline">Uganda Martyrs Pro-life Apostolate</span></span>
+    </a>
+  </div>
+  <button type="button" class="menu-toggle" id="menuToggle" aria-label="Open menu" aria-expanded="false" aria-controls="menu">☰</button>
+  <ul id="menu">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about-us.html">About Us</a></li>
+    <!-- Programs menu removed -->
+    <li class="nav-has-dropdown">
+      <span class="nav-label">
+        <a href="upcoming-events.html" class="nav-parent-link">Events &amp; Gallery</a>
+        <button type="button" class="nav-caret-btn" aria-label="Toggle Events menu" aria-expanded="false">
+          <i class="fa-solid fa-chevron-down nav-caret" aria-hidden="true"></i>
+        </button>
+      </span>
+      <ul class="nav-dropdown">
+        <li><a href="upcoming-events.html">Events</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+      </ul>
+    </li>
+    <li class="nav-has-dropdown">
+      <span class="nav-label">
+        <a href="join-club.html" class="nav-parent-link">Get Involved</a>
+        <button type="button" class="nav-caret-btn" aria-label="Toggle Get Involved menu" aria-expanded="false">
+          <i class="fa-solid fa-chevron-down nav-caret" aria-hidden="true"></i>
+        </button>
+      </span>
+      <ul class="nav-dropdown">
+        <li><a href="join-club.html">Join a Club</a></li>
+        <li><a href="volunteer.html">Volunteer</a></li>
+        <li><a href="partner-with-us.html">Partner With Us</a></li>
+        <li><a href="support-our-work.html">Support Our Work</a></li>
+      </ul>
+    </li>
+    <li><a href="resources.html">Resources</a></li>
+    <li class="nav-contact-btn"><a href="contact.html">Contact Us</a></li>
+  </ul>
+</nav>
+
+<!-- SITE SETTINGS (theme & font) -->
+<div class="site-settings" id="siteSettings">
+  <button type="button" class="site-settings-toggle" id="siteSettingsToggle" aria-label="Open display settings" aria-expanded="false" aria-controls="siteSettingsPanel">
+    <i class="fa-solid fa-gear" aria-hidden="true"></i>
+  </button>
+  <div class="site-settings-backdrop" id="siteSettingsBackdrop" hidden></div>
+  <aside class="site-settings-panel" id="siteSettingsPanel" role="dialog" aria-labelledby="siteSettingsTitle" aria-modal="true" hidden>
+    <header class="site-settings-header">
+      <div class="site-settings-header-text">
+        <span class="site-settings-header-icon" aria-hidden="true"><i class="fa-solid fa-palette"></i></span>
+        <div>
+          <h2 id="siteSettingsTitle">Display Settings</h2>
+          <p>Site opens in UMPA Classic. Choose green, red, or black when you like.</p>
+        </div>
+      </div>
+      <button type="button" class="site-settings-close" id="siteSettingsClose" aria-label="Close settings">
+        <i class="fa-solid fa-circle-xmark" aria-hidden="true"></i>
+      </button>
+    </header>
+    <div class="site-settings-body">
+      <fieldset class="site-settings-field">
+        <legend><i class="fa-solid fa-swatchbook" aria-hidden="true"></i> Color theme</legend>
+        <p class="site-settings-hint">Default is the full UMPA look. Pick one color to restyle the site.</p>
+        <div class="site-settings-grid site-settings-grid--themes" role="radiogroup" aria-label="Color theme">
+          <label class="site-settings-tile">
+            <input type="radio" name="umpa-theme" value="default" checked />
+            <span class="site-settings-tile-icon site-settings-tile-icon--default" aria-hidden="true"><i class="fa-solid fa-landmark"></i></span>
+            <span class="site-settings-tile-label">UMPA Classic</span>
+          </label>
+          <label class="site-settings-tile">
+            <input type="radio" name="umpa-theme" value="green" />
+            <span class="site-settings-tile-icon site-settings-tile-icon--green" aria-hidden="true"><i class="fa-solid fa-leaf"></i></span>
+            <span class="site-settings-tile-label">Green</span>
+          </label>
+          <label class="site-settings-tile">
+            <input type="radio" name="umpa-theme" value="red" />
+            <span class="site-settings-tile-icon site-settings-tile-icon--red" aria-hidden="true"><i class="fa-solid fa-heart"></i></span>
+            <span class="site-settings-tile-label">Red</span>
+          </label>
+          <label class="site-settings-tile">
+            <input type="radio" name="umpa-theme" value="black" />
+            <span class="site-settings-tile-icon site-settings-tile-icon--black" aria-hidden="true"><i class="fa-solid fa-moon"></i></span>
+            <span class="site-settings-tile-label">Black</span>
+          </label>
+        </div>
+      </fieldset>
+      <fieldset class="site-settings-field">
+        <legend><i class="fa-solid fa-font" aria-hidden="true"></i> Font style</legend>
+        <div class="site-settings-grid site-settings-grid--fonts" role="radiogroup" aria-label="Font style">
+          <label class="site-settings-tile site-settings-tile--font">
+            <input type="radio" name="umpa-font" value="poppins" checked />
+            <span class="site-settings-font-preview" style="font-family: 'Poppins', sans-serif" aria-hidden="true">Aa</span>
+            <span class="site-settings-tile-label">Poppins</span>
+          </label>
+          <label class="site-settings-tile site-settings-tile--font">
+            <input type="radio" name="umpa-font" value="inter" />
+            <span class="site-settings-font-preview" style="font-family: 'Inter', sans-serif" aria-hidden="true">Aa</span>
+            <span class="site-settings-tile-label">Inter</span>
+          </label>
+          <label class="site-settings-tile site-settings-tile--font">
+            <input type="radio" name="umpa-font" value="open-sans" />
+            <span class="site-settings-font-preview" style="font-family: 'Open Sans', sans-serif" aria-hidden="true">Aa</span>
+            <span class="site-settings-tile-label">Open Sans</span>
+          </label>
+          <label class="site-settings-tile site-settings-tile--font">
+            <input type="radio" name="umpa-font" value="lora" />
+            <span class="site-settings-font-preview" style="font-family: 'Lora', serif" aria-hidden="true">Aa</span>
+            <span class="site-settings-tile-label">Lora</span>
+          </label>
+          <label class="site-settings-tile site-settings-tile--font site-settings-tile--wide">
+            <input type="radio" name="umpa-font" value="merriweather" />
+            <span class="site-settings-font-preview" style="font-family: 'Merriweather', serif" aria-hidden="true">Aa</span>
+            <span class="site-settings-tile-label">Merriweather</span>
+          </label>
+        </div>
+        <select id="umpaFontSelect" class="visually-hidden" tabindex="-1" aria-hidden="true">
+          <option value="poppins">Poppins</option>
+          <option value="inter">Inter</option>
+          <option value="open-sans">Open Sans</option>
+          <option value="lora">Lora</option>
+          <option value="merriweather">Merriweather</option>
+        </select>
+      </fieldset>
+      <button type="button" class="site-settings-reset" id="siteSettingsReset">
+        <i class="fa-solid fa-arrow-rotate-left" aria-hidden="true"></i>
+        Reset to defaults
+      </button>
+    </div>
+  </aside>
+</div>
+
+<main class="page-main">
+  <section class="page-banner page-banner--blend">
+    <div class="page-banner-photo" aria-hidden="true">
+      <img src="imgs/use.jpeg" alt="" loading="eager" />
+    </div>
+    <div class="page-banner-inner">
+      <p class="page-breadcrumb"><a href="index.html">Home</a> / About Us</p>
+      <h1>About Us</h1>
+      <p>Uganda Martyrs Pro-life Apostolate (UMPA) promotes and defends human life from conception until natural death.</p>
+    </div>
+  </section>
+
+
+  <section class="journey-section page-block" id="our-journey">
+    <div class="page-block-inner journey-grid">
+      <div class="journey-visual">
+        <div class="journey-visual-frame">
+          <img src="imgs/222.jpg" alt="UMPA volunteers at a pro-life fundraising outreach" loading="lazy" />
+        </div>
+        <span class="journey-visual-deco" aria-hidden="true"></span>
+      </div>
+      <div class="journey-content">
+        <p class="journey-eyebrow">Our Journey</p>
+        <h2 class="journey-heading">The UMPA Story</h2>
+        <div class="journey-timeline-scroll">
+          <div class="journey-timeline">
+            <div class="journey-timeline-line" aria-hidden="true"></div>
+
+            <div class="journey-item journey-item--left">
+              <article class="journey-card">
+                <span class="journey-year">2008</span>
+                <h3>Founded in Kampala</h3>
+                <p>Uganda Martyrs Pro-life Apostolate was established in the Archdiocese of Kampala under Archbishop Dr. Cyprian Kizito Lwanga, with a mission to promote and defend human life from conception to natural death.</p>
+              </article>
+              <div class="journey-node" aria-hidden="true"><i class="fa-solid fa-church"></i></div>
+              <div class="journey-spacer"></div>
+            </div>
+
+            <div class="journey-item journey-item--right">
+              <div class="journey-spacer"></div>
+              <div class="journey-node" aria-hidden="true"><i class="fa-solid fa-users"></i></div>
+              <article class="journey-card">
+                <span class="journey-year">2010s</span>
+                <h3>Growing Through Parishes &amp; Schools</h3>
+                <p>Pro-life clubs and awareness campaigns spread across parishes, primary and secondary schools, universities, and communities&mdash;empowering young people and families to uphold moral values.</p>
+              </article>
+            </div>
+
+            <div class="journey-item journey-item--left">
+              <article class="journey-card">
+                <span class="journey-year">2014</span>
+                <h3>Voice on Radio Maria</h3>
+                <p>UMPA began weekly radio talk shows on Radio Maria Uganda every Thursday, bringing pro-life education on life, family, and human dignity to listeners nationwide.</p>
+              </article>
+              <div class="journey-node" aria-hidden="true"><i class="fa-solid fa-tower-broadcast"></i></div>
+              <div class="journey-spacer"></div>
+            </div>
+
+            <div class="journey-item journey-item--right">
+              <div class="journey-spacer"></div>
+              <div class="journey-node" aria-hidden="true"><i class="fa-solid fa-calendar-days"></i></div>
+              <article class="journey-card">
+                <span class="journey-year">Ongoing</span>
+                <h3>Conventions &amp; Diocesan Days</h3>
+                <p>Annual pro-life conventions and diocesan pro-life days unite youth and communities for spiritual nourishment, moral formation, and celebration of God-given talents.</p>
+              </article>
+            </div>
+
+            <div class="journey-item journey-item--left">
+              <article class="journey-card">
+                <span class="journey-year">Today</span>
+                <h3>A Culture of Life Across Uganda</h3>
+                <p>From counseling and natural family planning to charity outreach and media programs, UMPA continues to serve with integrity, compassion, and the conviction that every human life matters.</p>
+              </article>
+              <div class="journey-node" aria-hidden="true"><i class="fa-solid fa-heart"></i></div>
+              <div class="journey-spacer"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="page-block page-block--alt" id="background">
+    <div class="page-block-inner page-prose">
+      <h2 class="page-section-title">Background</h2>
+      <p>Uganda Martyrs Pro-life Apostolate (UMPA) is a Christian organization that promotes and defends human life from conception until natural death.</p>
+      <p>UMPA was founded by Archbishop Dr. Cyprian Kizito Lwanga in response to the growing culture of death and high rates of abortion in Uganda.</p>
+      <p>The organization addresses all behaviors and practices that put the dignity of the human person at risk; these include:</p>
+      <ul class="background-issues-list">
+        <li>Abortion</li>
+        <li>Homosexuality</li>
+        <li>Suicide</li>
+        <li>Drugs and substance abuse</li>
+        <li>Human sacrifice</li>
+        <li>Mob justice</li>
+        <li>Sexual immorality</li>
+        <li>Defilement</li>
+        <li>Euthanasia</li>
+        <li>Pornography</li>
+        <li>Rape</li>
+        <li>Artificial Reproductive Technologies</li>
+        <li>And other behaviours that promote the culture of death</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="page-block" id="who-we-reach">
+    <div class="page-block-inner page-prose">
+      <h2 class="page-section-title">Who We Reach</h2>
+      <p>We meet audiences from different age groups, education status, and religious affiliations. The aim is to empower the young and old to choose to uphold morals.</p>
+      
+      <div class="umpa-custom-table-wrapper mt-4">
+        <table class="umpa-custom-table">
+          <thead>
+            <tr>
+              <th scope="col" style="width: 35%;">Target Group</th>
+              <th scope="col">Details &amp; Context</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                <div class="d-flex align-items-center">
+                  <i class="fa-solid fa-graduation-cap table-icon" style="color: #8f0f0f; font-size: 1.1rem; width: 24px; margin-right: 12px;"></i>
+                  <strong>Primary &amp; Secondary Schools</strong>
+                </div>
+              </td>
+              <td>Empowering pupils and students with moral guidance and pro-life values early in their development.</td>
+            </tr>
+            <tr>
+              <td>
+                <div class="d-flex align-items-center">
+                  <i class="fa-solid fa-university table-icon" style="color: #04408a; font-size: 1.1rem; width: 24px; margin-right: 12px;"></i>
+                  <strong>Tertiary Institutions &amp; Universities</strong>
+                </div>
+              </td>
+              <td>Establishing pro-life youth clubs and mentoring young adults through interactive debates.</td>
+            </tr>
+            <tr>
+              <td>
+                <div class="d-flex align-items-center">
+                  <i class="fa-solid fa-church table-icon" style="color: #8f0f0f; font-size: 1.1rem; width: 24px; margin-right: 12px;"></i>
+                  <strong>Churches &amp; Parishes</strong>
+                </div>
+              </td>
+              <td>Providing spiritual nourishment, moral formation, and support within parishes, houses of formation, and faith communities.</td>
+            </tr>
+            <tr>
+              <td>
+                <div class="d-flex align-items-center">
+                  <i class="fa-solid fa-briefcase table-icon" style="color: #04408a; font-size: 1.1rem; width: 24px; margin-right: 12px;"></i>
+                  <strong>Corporate &amp; Workplaces</strong>
+                </div>
+              </td>
+              <td>Engaging professional groups and corporate spaces in dialogues concerning human dignity.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <section class="page-block page-block--alt" id="what-we-do">
+    <div class="page-block-inner page-prose">
+      <h2 class="page-section-title">What We Do</h2>
+      <p>Uganda Martyrs Pro-life Apostolate (UMPA) organizes and conducts awareness campaigns targeting diverse groups and forms pro-life youth clubs. We empower people to embrace moral values through educative talks and videos.</p>
+      <p>Our sessions are very interactive: we discuss with people and, whenever possible, encourage them to debate different moral issues. We always encourage question-and-answer sessions to allow for clarity.</p>
+    </div>
+  </section>
+
+  <section class="page-block page-block--alt" id="leadership">
+    <div class="page-block-inner page-prose">
+      <h2 class="page-section-title">Team</h2>
+      <p>UMPA is supported by a committed team of coordinators, chaplains, and volunteer leaders who guide programs across parishes, schools, and communities in Uganda.</p>
+
+      <article class="leadership-founder">
+        <div class="leadership-founder-badge">Founder</div>
+        <h3>Archbishop Dr. Cyprian Kizito Lwanga</h3>
+        <p class="leadership-role">Founder, Uganda Martyrs Pro-life Apostolate</p>
+        <p>UMPA was founded in 2008 under his leadership as Archbishop of Kampala, in response to the growing culture of death and high rates of abortion in Uganda.</p>
+      </article>
+
+      <div class="leadership-team">
+        <article class="leadership-card">
+          <div class="leadership-card-icon" aria-hidden="true"><i class="fa-solid fa-cross"></i></div>
+          <h3>Rev. Fr. Charles Lwanga Makoboza</h3>
+          <p class="leadership-role">Chaplain</p>
+        </article>
+        <article class="leadership-card">
+          <div class="leadership-card-icon" aria-hidden="true"><i class="fa-solid fa-user-tie"></i></div>
+          <h3>Dr. Sandra Nabachwa</h3>
+          <p class="leadership-role">Director</p>
+        </article>
+        <article class="leadership-card">
+          <div class="leadership-card-icon" aria-hidden="true"><i class="fa-solid fa-hand-holding-heart"></i></div>
+          <h3>Ms. Resty Ingabire</h3>
+          <p class="leadership-role">Psychosocial Support Officer</p>
+        </article>
+        <article class="leadership-card">
+          <div class="leadership-card-icon" aria-hidden="true"><i class="fa-solid fa-clipboard-list"></i></div>
+          <h3>Ms. Josephine Kagogwe</h3>
+          <p class="leadership-role">Program Officer</p>
+        </article>
+      </div>
+
+      <p class="page-back"><a href="index.html">← Back to Home</a></p>
+    </div>
+  </section>
+  
+</main>
+<!-- FOOTER -->
+<footer class="footer-wrap">
+  <section class="footer-bar">
+    <div class="footer-inner">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about-us.html">About Us</a></li>
+            <li><a href="about-us.html#programs">Programs</a></li>
+            <li><a href="upcoming-events.html">Events &amp; Gallery</a></li>
+            <li><a href="resources.html">Resources</a></li>
+            <li><a href="join-club.html">Get Involved</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Follow Us</h4>
+          <ul>
+            <li><a class="social-link" href="https://www.facebook.com/profile.php?id=100064422140843&amp;mibextid=rS40aB7S9Ucbxw6v" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-facebook"></i> Facebook</a></li>
+            <li><a class="social-link" href="https://x.com/ProlifeUmpa" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-x-twitter"></i> Twitter</a></li>
+            <li><a class="social-link" href="https://www.youtube.com/channel/UC00grETNPLlj9aXZJGh-7sA" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-youtube"></i> YouTube</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Contact Info</h4>
+          <p><strong>Email:</strong> <a href="mailto:prolife.klarch@yahoo.com">prolife.klarch@yahoo.com</a></p>
+          <p><strong>Phone:</strong> <a href="tel:+256785566505">+256 785 566505</a></p>
+          <p><strong>Location:</strong> <a href="contact.html">Kampala, Uganda</a></p>
+          <p><a href="contact.html" class="footer-cta-link">Contact Us →</a></p>
+        </div>
+        <div class="footer-col">
+          <h4>Newsletter</h4>
+          <p>Get updates on our programs, events, and pro-life news delivered to your inbox.</p>
+          <form class="newsletter-form" action="https://formsubmit.co/prolife.klarch@yahoo.com" method="POST">
+            <input type="email" name="email" required placeholder="Enter your email" autocomplete="email" />
+            <button type="submit">Subscribe</button>
+          </form>
+          <div class="newsletter-form-status" id="sub-msg" role="status" hidden>✓ Thank you for subscribing!</div>
+        </div>
+      </div>
+      <div class="footer-bottom-wrap">
+        <p>© 2026 UMPA Uganda Martyrs Pro-life Apostolate. All rights reserved.</p>
+        <div class="footer-bottom-links">
+          <a href="#">Disclaimer</a> |
+          <a href="contact.html">Contact</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</footer>
+
+<script src="js/script.js" defer></script>
+</body>
+</html>
