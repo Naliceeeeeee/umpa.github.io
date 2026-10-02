@@ -1,0 +1,849 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Pro-life resources and materials from UMPA.">
+<title>Resources | UMPA</title>
+<link rel="shortcut icon" href="pasted_file_OtfQNi_image_a5ba3799.png" type="image/png" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Lora:ital,wght@0,500;0,600;0,700;1,500&family=Merriweather:wght@400;700&family=Open+Sans:wght@400;600;700&family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+<script>
+(function () {
+  function getQueryParam(name) {
+    try {
+      var match = RegExp('[?&]' + name + '=([^&]*)').exec(window.location.search);
+      return match && decodeURIComponent(match[1].replace(/\+/g, ' '));
+    } catch (e) {
+      return null;
+    }
+  }
+
+  function readStorage(key, fallback) {
+    try {
+      return localStorage.getItem(key) || fallback;
+    } catch (e) {
+      return fallback;
+    }
+  }
+
+  var stored = getQueryParam('umpa-theme') || readStorage('umpa-theme', 'default');
+  var legacy = { light: 'default', dark: 'black', contrast: 'default' };
+  var valid = { default: 1, green: 1, red: 1, black: 1 };
+  var theme = valid[stored] ? stored : (legacy[stored] || 'default');
+  var font = getQueryParam('umpa-font') || readStorage('umpa-font', 'poppins');
+  document.documentElement.setAttribute('data-theme', theme);
+  document.documentElement.setAttribute('data-font', font);
+})();
+</script>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+<link rel="stylesheet" href="css/style.css" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+</head>
+<body class="resources-page">
+<!-- TOP BAR -->
+<div class="topbar">
+  <div class="topbar-left">
+    <a href="mailto:prolife.klarch@yahoo.com"><i class="fa-regular fa-envelope"></i> prolife.klarch@yahoo.com</a>
+    <a href="contact.html"><i class="fa-solid fa-user"></i> Login</a>
+  </div>
+  <div class="topbar-right">
+    <a href="https://www.facebook.com/profile.php?id=100064422140843&amp;mibextid=rS40aB7S9Ucbxw6v" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+    <a href="https://x.com/ProlifeUmpa" target="_blank" rel="noopener noreferrer" aria-label="X"><i class="fa-brands fa-x-twitter"></i></a>
+    <a href="https://www.youtube.com/channel/UC00grETNPLlj9aXZJGh-7sA" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+  </div>
+</div>
+
+<!-- NAV -->
+<nav>
+  <div class="logo">
+    <a href="index.html" class="logo-link">
+      <img src="dycss-logo.jpeg" alt="UMPA Logo">
+      <img src="pasted_file_OtfQNi_image_a5ba3799.png" alt="UMPA Logo">
+      <span class="logo-text"><strong>UMPA</strong><span class="logo-tagline">Uganda Martyrs Pro-life Apostolate</span></span>
+    </a>
+  </div>
+  <button type="button" class="menu-toggle" id="menuToggle" aria-label="Open menu" aria-expanded="false" aria-controls="menu">☰</button>
+  <ul id="menu">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about-us.html">About Us</a></li>
+    <!-- Programs menu removed -->
+    <li class="nav-has-dropdown">
+      <span class="nav-label">
+        <a href="upcoming-events.html" class="nav-parent-link">Events &amp; Gallery</a>
+        <button type="button" class="nav-caret-btn" aria-label="Toggle Events menu" aria-expanded="false">
+          <i class="fa-solid fa-chevron-down nav-caret" aria-hidden="true"></i>
+        </button>
+      </span>
+      <ul class="nav-dropdown">
+        <li><a href="upcoming-events.html">Events</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+      </ul>
+    </li>
+    <li class="nav-has-dropdown">
+      <span class="nav-label">
+        <a href="join-club.html" class="nav-parent-link">Get Involved</a>
+        <button type="button" class="nav-caret-btn" aria-label="Toggle Get Involved menu" aria-expanded="false">
+          <i class="fa-solid fa-chevron-down nav-caret" aria-hidden="true"></i>
+        </button>
+      </span>
+      <ul class="nav-dropdown">
+        <li><a href="join-club.html">Join a Club</a></li>
+        <li><a href="support-our-work.html">Support Our Work</a></li>
+      </ul>
+    </li>
+    <li><a href="resources.html">Resources</a></li>
+    <li class="nav-contact-btn"><a href="contact.html">Contact Us</a></li>
+  </ul>
+</nav>
+
+<!-- SITE SETTINGS (theme & font) -->
+<div class="site-settings" id="siteSettings">
+  <button type="button" class="site-settings-toggle" id="siteSettingsToggle" aria-label="Open display settings" aria-expanded="false" aria-controls="siteSettingsPanel">
+    <i class="fa-solid fa-gear" aria-hidden="true"></i>
+  </button>
+  <div class="site-settings-backdrop" id="siteSettingsBackdrop" hidden></div>
+  <aside class="site-settings-panel" id="siteSettingsPanel" role="dialog" aria-labelledby="siteSettingsTitle" aria-modal="true" hidden>
+    <header class="site-settings-header">
+      <div class="site-settings-header-text">
+        <span class="site-settings-header-icon" aria-hidden="true"><i class="fa-solid fa-palette"></i></span>
+        <div>
+          <h2 id="siteSettingsTitle">Display Settings</h2>
+          <p>Site opens in UMPA Classic. Choose green, red, or black when you like.</p>
+        </div>
+      </div>
+      <button type="button" class="site-settings-close" id="siteSettingsClose" aria-label="Close settings">
+        <i class="fa-solid fa-circle-xmark" aria-hidden="true"></i>
+      </button>
+    </header>
+    <div class="site-settings-body">
+      <fieldset class="site-settings-field">
+        <legend><i class="fa-solid fa-swatchbook" aria-hidden="true"></i> Color theme</legend>
+        <p class="site-settings-hint">Default is the full UMPA look. Pick one color to restyle the site.</p>
+        <div class="site-settings-grid site-settings-grid--themes" role="radiogroup" aria-label="Color theme">
+          <label class="site-settings-tile">
+            <input type="radio" name="umpa-theme" value="default" checked />
+            <span class="site-settings-tile-icon site-settings-tile-icon--default" aria-hidden="true"><i class="fa-solid fa-landmark"></i></span>
+            <span class="site-settings-tile-label">UMPA Classic</span>
+          </label>
+          <label class="site-settings-tile">
+            <input type="radio" name="umpa-theme" value="green" />
+            <span class="site-settings-tile-icon site-settings-tile-icon--green" aria-hidden="true"><i class="fa-solid fa-leaf"></i></span>
+            <span class="site-settings-tile-label">Green</span>
+          </label>
+          <label class="site-settings-tile">
+            <input type="radio" name="umpa-theme" value="red" />
+            <span class="site-settings-tile-icon site-settings-tile-icon--red" aria-hidden="true"><i class="fa-solid fa-heart"></i></span>
+            <span class="site-settings-tile-label">Red</span>
+          </label>
+          <label class="site-settings-tile">
+            <input type="radio" name="umpa-theme" value="black" />
+            <span class="site-settings-tile-icon site-settings-tile-icon--black" aria-hidden="true"><i class="fa-solid fa-moon"></i></span>
+            <span class="site-settings-tile-label">Black</span>
+          </label>
+        </div>
+      </fieldset>
+      <fieldset class="site-settings-field">
+        <legend><i class="fa-solid fa-font" aria-hidden="true"></i> Font style</legend>
+        <div class="site-settings-grid site-settings-grid--fonts" role="radiogroup" aria-label="Font style">
+          <label class="site-settings-tile site-settings-tile--font">
+            <input type="radio" name="umpa-font" value="poppins" checked />
+            <span class="site-settings-font-preview" style="font-family: 'Poppins', sans-serif" aria-hidden="true">Aa</span>
+            <span class="site-settings-tile-label">Poppins</span>
+          </label>
+          <label class="site-settings-tile site-settings-tile--font">
+            <input type="radio" name="umpa-font" value="inter" />
+            <span class="site-settings-font-preview" style="font-family: 'Inter', sans-serif" aria-hidden="true">Aa</span>
+            <span class="site-settings-tile-label">Inter</span>
+          </label>
+          <label class="site-settings-tile site-settings-tile--font">
+            <input type="radio" name="umpa-font" value="open-sans" />
+            <span class="site-settings-font-preview" style="font-family: 'Open Sans', sans-serif" aria-hidden="true">Aa</span>
+            <span class="site-settings-tile-label">Open Sans</span>
+          </label>
+          <label class="site-settings-tile site-settings-tile--font">
+            <input type="radio" name="umpa-font" value="lora" />
+            <span class="site-settings-font-preview" style="font-family: 'Lora', serif" aria-hidden="true">Aa</span>
+            <span class="site-settings-tile-label">Lora</span>
+          </label>
+          <label class="site-settings-tile site-settings-tile--font site-settings-tile--wide">
+            <input type="radio" name="umpa-font" value="merriweather" />
+            <span class="site-settings-font-preview" style="font-family: 'Merriweather', serif" aria-hidden="true">Aa</span>
+            <span class="site-settings-tile-label">Merriweather</span>
+          </label>
+        </div>
+        <select id="umpaFontSelect" class="visually-hidden" tabindex="-1" aria-hidden="true">
+          <option value="poppins">Poppins</option>
+          <option value="inter">Inter</option>
+          <option value="open-sans">Open Sans</option>
+          <option value="lora">Lora</option>
+          <option value="merriweather">Merriweather</option>
+        </select>
+      </fieldset>
+      <button type="button" class="site-settings-reset" id="siteSettingsReset">
+        <i class="fa-solid fa-arrow-rotate-left" aria-hidden="true"></i>
+        Reset to defaults
+      </button>
+    </div>
+  </aside>
+</div>
+
+<main class="page-main">
+  <section class="page-banner">
+    <div class="page-banner-inner">
+      <h1>Resources</h1>
+      <p>Educational materials for homes, schools, and parishes.</p>
+    </div>
+  </section>
+  
+        <section class="events-portal-toolbar" aria-label="Filter resources" style="margin-top: 2rem; margin-bottom: 2rem;">
+          <div class="events-portal-inner">
+            <div class="events-portal-filters resources-portal-filters" role="tablist" style="display: flex; flex-wrap: wrap; gap: 8px; justify-content: center;">
+              <button type="button" class="events-portal-filter is-active" data-filter="all" role="tab" aria-selected="true">All</button>
+              <button type="button" class="events-portal-filter" data-filter="guides" role="tab" aria-selected="false">Guides</button>
+              <button type="button" class="events-portal-filter" data-filter="pdf" role="tab" aria-selected="false">PDFs</button>
+              <button type="button" class="events-portal-filter" data-filter="clubs" role="tab" aria-selected="false">Clubs &amp; Schools</button>
+              <button type="button" class="events-portal-filter" data-filter="family" role="tab" aria-selected="false">Family &amp; NFP</button>
+            </div>
+          </div>
+        </section>
+
+        <section class="page-block" id="materials">
+          <div class="page-block-inner">
+            <h2>Educational Materials</h2>
+            <p>Brochures and guides for clubs and parishes. See our <a href="awareness-campaigns.html?umpa-theme=default&amp;umpa-font=poppins">programs</a>.</p>
+          </div>
+        </section>
+
+        <section class="events-portal-grid-section" aria-label="Resource downloads">
+          <div class="events-portal-inner">            <div class="events-portal-grid" id="resourcesPortalGrid" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 24px;">
+              <!-- 1. 2-Pro-Life A4 Brochure -->
+              <article class="events-portal-card resources-portal-card resources-portal-card--folder" data-category="pdf">
+                <div class="events-portal-card__media resources-portal-card__media--pdf" data-doc-url="resourses/2-Pro-Life_A4_Brochure_Jul_2025%20(1).pdf" data-doc-title="2-Pro-Life A4 Brochure Jul 2025" tabindex="0" role="button" aria-label="View 2-Pro-Life A4 Brochure Jul 2025">
+                  <div class="resource-doc-cover">
+                    <span class="resource-doc-cover__badge"><i class="fa-solid fa-file-pdf"></i> PDF</span>
+                    <div class="resource-doc-cover__body">
+                      <div class="resource-doc-cover__title">2-Pro-Life A4 Brochure</div>
+                      <div class="resource-doc-cover__meta">UMPA Apostolate • Jul 2025</div>
+                    </div>
+                    <div class="resource-doc-cover__lines" aria-hidden="true">
+                      <span></span><span></span><span></span>
+                    </div>
+                  </div>
+                  <span class="events-portal-card__badge">PDF</span>
+                  <div class="resource-card-hover-overlay"><span class="resource-preview-badge"><i class="fa-solid fa-eye"></i> View Document</span></div>
+                </div>
+                <div class="events-portal-card__body">
+                  <h3>2-Pro-Life A4 Brochure Jul 2025</h3>
+                  <p class="resource-desc">Official UMPA educational brochure on human life dignity, moral formation, and pro-life action.</p>
+                  <div class="resource-card-actions">
+                    <button type="button" class="btn-resource-preview" data-doc-url="resourses/2-Pro-Life_A4_Brochure_Jul_2025%20(1).pdf" data-doc-title="2-Pro-Life A4 Brochure Jul 2025">
+                      <i class="fa-solid fa-eye"></i> View Document
+                    </button>
+                    <a href="resourses/2-Pro-Life_A4_Brochure_Jul_2025%20(1).pdf" download="2-Pro-Life_A4_Brochure_Jul_2025.pdf" class="btn-resource-download" title="Download PDF">
+                      <i class="fa-solid fa-download"></i> Download
+                    </a>
+                  </div>
+                </div>
+              </article>
+
+              <!-- 2. Pro-life A5 Flier on Abortion -->
+              <article class="events-portal-card resources-portal-card resources-portal-card--folder" data-category="pdf">
+                <div class="events-portal-card__media resources-portal-card__media--pdf" data-doc-url="resourses/6-Pro-life_A5_Flier-abortion_Jul-2025%20(9).pdf" data-doc-title="Pro-life A5 Flier on Abortion" tabindex="0" role="button" aria-label="View Pro-life A5 Flier on Abortion">
+                  <div class="resource-doc-cover">
+                    <span class="resource-doc-cover__badge"><i class="fa-solid fa-file-pdf"></i> PDF</span>
+                    <div class="resource-doc-cover__body">
+                      <div class="resource-doc-cover__title">A5 Flier on Abortion</div>
+                      <div class="resource-doc-cover__meta">Life Awareness Campaign</div>
+                    </div>
+                    <div class="resource-doc-cover__lines" aria-hidden="true">
+                      <span></span><span></span><span></span>
+                    </div>
+                  </div>
+                  <span class="events-portal-card__badge">PDF</span>
+                  <div class="resource-card-hover-overlay"><span class="resource-preview-badge"><i class="fa-solid fa-eye"></i> View Document</span></div>
+                </div>
+                <div class="events-portal-card__body">
+                  <h3>Pro-life A5 Flier on Abortion</h3>
+                  <p class="resource-desc">Awareness leaflet defending the unborn, explaining biological realities, and offering compassionate help.</p>
+                  <div class="resource-card-actions">
+                    <button type="button" class="btn-resource-preview" data-doc-url="resourses/6-Pro-life_A5_Flier-abortion_Jul-2025%20(9).pdf" data-doc-title="Pro-life A5 Flier on Abortion">
+                      <i class="fa-solid fa-eye"></i> View Document
+                    </button>
+                    <a href="resourses/6-Pro-life_A5_Flier-abortion_Jul-2025%20(9).pdf" download="Pro-life_A5_Flier_Abortion.pdf" class="btn-resource-download" title="Download PDF">
+                      <i class="fa-solid fa-download"></i> Download
+                    </a>
+                  </div>
+                </div>
+              </article>
+
+              <!-- 3. Pro-Life B4 Contraceptives Brochure -->
+              <article class="events-portal-card resources-portal-card resources-portal-card--folder" data-category="family">
+                <div class="events-portal-card__media resources-portal-card__media--pdf" data-doc-url="resourses/7-Pro-Life_B4_Contraceptives_Brochure_%5B2%5D_FINAL%20(1).pdf" data-doc-title="Pro-Life B4 Contraceptives Brochure" tabindex="0" role="button" aria-label="View Pro-Life B4 Contraceptives Brochure">
+                  <div class="resource-doc-cover">
+                    <span class="resource-doc-cover__badge"><i class="fa-solid fa-file-pdf"></i> Family</span>
+                    <div class="resource-doc-cover__body">
+                      <div class="resource-doc-cover__title">Contraceptives Brochure</div>
+                      <div class="resource-doc-cover__meta">NFP &amp; Family Guidance</div>
+                    </div>
+                    <div class="resource-doc-cover__lines" aria-hidden="true">
+                      <span></span><span></span><span></span>
+                    </div>
+                  </div>
+                  <span class="events-portal-card__badge">Family &amp; NFP</span>
+                  <div class="resource-card-hover-overlay"><span class="resource-preview-badge"><i class="fa-solid fa-eye"></i> View Document</span></div>
+                </div>
+                <div class="events-portal-card__body">
+                  <h3>Pro-Life B4 Contraceptives Brochure</h3>
+                  <p class="resource-desc">Educational factsheet on contraceptives, health effects, and natural family planning guidance.</p>
+                  <div class="resource-card-actions">
+                    <button type="button" class="btn-resource-preview" data-doc-url="resourses/7-Pro-Life_B4_Contraceptives_Brochure_%5B2%5D_FINAL%20(1).pdf" data-doc-title="Pro-Life B4 Contraceptives Brochure">
+                      <i class="fa-solid fa-eye"></i> View Document
+                    </button>
+                    <a href="resourses/7-Pro-Life_B4_Contraceptives_Brochure_%5B2%5D_FINAL%20(1).pdf" download="Pro-Life_Contraceptives_Brochure.pdf" class="btn-resource-download" title="Download PDF">
+                      <i class="fa-solid fa-download"></i> Download
+                    </a>
+                  </div>
+                </div>
+              </article>
+
+              <!-- 4. Article on Pornography -->
+              <article class="events-portal-card resources-portal-card resources-portal-card--folder" data-category="guides">
+                <div class="events-portal-card__media resources-portal-card__media--pdf" data-doc-url="resourses/CamScanner%2009-08-2025%2009.40.pdf" data-doc-title="Educational Article on Pornography" tabindex="0" role="button" aria-label="View Educational Article on Pornography">
+                  <div class="resource-doc-cover">
+                    <span class="resource-doc-cover__badge"><i class="fa-solid fa-file-pdf"></i> Guide</span>
+                    <div class="resource-doc-cover__body">
+                      <div class="resource-doc-cover__title">Article on Pornography</div>
+                      <div class="resource-doc-cover__meta">Effects &amp; Steps to Recovery</div>
+                    </div>
+                    <div class="resource-doc-cover__lines" aria-hidden="true">
+                      <span></span><span></span><span></span>
+                    </div>
+                  </div>
+                  <span class="events-portal-card__badge">Guides</span>
+                  <div class="resource-card-hover-overlay"><span class="resource-preview-badge"><i class="fa-solid fa-eye"></i> View Document</span></div>
+                </div>
+                <div class="events-portal-card__body">
+                  <h3>Educational Article on Pornography</h3>
+                  <p class="resource-desc">Comprehensive guide on the reality of pornography addiction, warning signs, and recovery steps.</p>
+                  <div class="resource-card-actions">
+                    <button type="button" class="btn-resource-preview" data-doc-url="resourses/CamScanner%2009-08-2025%2009.40.pdf" data-doc-title="Educational Article on Pornography">
+                      <i class="fa-solid fa-eye"></i> View Document
+                    </button>
+                    <a href="resourses/CamScanner%2009-08-2025%2009.40.pdf" download="Educational_Article_Pornography.pdf" class="btn-resource-download" title="Download PDF">
+                      <i class="fa-solid fa-download"></i> Download
+                    </a>
+                  </div>
+                </div>
+              </article>
+
+              <!-- 5. Best Choices Guide (Book / Visual Guide) -->
+              <article class="events-portal-card resources-portal-card resources-portal-card--folder" data-category="guides clubs">
+                <div class="events-portal-card__media" data-doc-url="resourses/WhatsApp%20Image%202026-08-18%20at%2011.33.14%20AM.jpeg" data-doc-title="Best Choices for Today's Pre-Teens &amp; Teens" tabindex="0" role="button" aria-label="View Best Choices Book Guide">
+                  <img src="resourses/WhatsApp%20Image%202026-08-18%20at%2011.33.14%20AM.jpeg" alt="Best Choices for Today's Pre-Teens &amp; Teens" class="resource-card-cover-img" loading="lazy" />
+                  <span class="events-portal-card__badge">Guides</span>
+                  <div class="resource-card-hover-overlay"><span class="resource-preview-badge"><i class="fa-solid fa-eye"></i> View Document</span></div>
+                </div>
+                <div class="events-portal-card__body">
+                  <h3>Best Choices for Pre-Teens &amp; Teens</h3>
+                  <p class="resource-desc">A book to help young people navigate life challenges, drug prevention, and positive decision making.</p>
+                  <div class="resource-card-actions">
+                    <button type="button" class="btn-resource-preview" data-doc-url="resourses/WhatsApp%20Image%202026-08-18%20at%2011.33.14%20AM.jpeg" data-doc-title="Best Choices for Today's Pre-Teens &amp; Teens">
+                      <i class="fa-solid fa-eye"></i> View Document
+                    </button>
+                    <a href="resourses/WhatsApp%20Image%202026-08-18%20at%2011.33.14%20AM.jpeg" download="Best_Choices_PreTeens_Teens.jpeg" class="btn-resource-download" title="Download Flyer">
+                      <i class="fa-solid fa-download"></i> Download
+                    </a>
+                  </div>
+                </div>
+              </article>
+
+              <!-- 6. Pro-Life Prayer Card -->
+              <article class="events-portal-card resources-portal-card resources-portal-card--folder" data-category="guides">
+                <div class="events-portal-card__media resources-portal-card__media--pdf" data-doc-url="resourses/Pro-Life_Prayer_A7_Card-1.pdf" data-doc-title="Pro-Life Prayer Card" tabindex="0" role="button" aria-label="View Pro-Life Prayer Card">
+                  <div class="resource-doc-cover">
+                    <span class="resource-doc-cover__badge"><i class="fa-solid fa-hands-praying"></i> Prayer</span>
+                    <div class="resource-doc-cover__body">
+                      <div class="resource-doc-cover__title">Pro-Life Prayer Card</div>
+                      <div class="resource-doc-cover__meta">A7 Pocket Prayer Resource</div>
+                    </div>
+                    <div class="resource-doc-cover__lines" aria-hidden="true">
+                      <span></span><span></span><span></span>
+                    </div>
+                  </div>
+                  <span class="events-portal-card__badge">Guides</span>
+                  <div class="resource-card-hover-overlay"><span class="resource-preview-badge"><i class="fa-solid fa-eye"></i> View Document</span></div>
+                </div>
+                <div class="events-portal-card__body">
+                  <h3>Pro-Life Prayer Card</h3>
+                  <p class="resource-desc">A spiritual prayer card dedicated to upholding life, supporting families, and defending the unborn.</p>
+                  <div class="resource-card-actions">
+                    <button type="button" class="btn-resource-preview" data-doc-url="resourses/Pro-Life_Prayer_A7_Card-1.pdf" data-doc-title="Pro-Life Prayer Card">
+                      <i class="fa-solid fa-eye"></i> View Document
+                    </button>
+                    <a href="resourses/Pro-Life_Prayer_A7_Card-1.pdf" download="Pro-Life_Prayer_Card.pdf" class="btn-resource-download" title="Download PDF">
+                      <i class="fa-solid fa-download"></i> Download
+                    </a>
+                  </div>
+                </div>
+              </article>
+
+              <!-- 7. UMPA Anthem (Audio) -->
+              <article class="events-portal-card resources-portal-card resources-portal-card--folder" data-category="guides">
+                <div class="events-portal-card__media resources-portal-card__media--audio" tabindex="0">
+                  <div class="resource-audio-hero">
+                    <span class="resources-portal-card__icon" aria-hidden="true"><i class="fa-solid fa-music"></i></span>
+                    <span class="resource-audio-label">Official Song</span>
+                    <div class="resource-audio-soundwaves" aria-hidden="true">
+                      <span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+                    </div>
+                  </div>
+                  <span class="events-portal-card__badge"><i class="fa-solid fa-volume-high"></i> Audio</span>
+                </div>
+                <div class="events-portal-card__body">
+                  <h3>UMPA Anthem</h3>
+                  <p class="resource-desc">Listen to the official apostolate anthem celebrating the sanctity of human life and faith.</p>
+                  <audio controls preload="metadata" style="width: 100%; margin: 0.75rem 0;">
+                    <source src="resourses/WhatsApp%20Audio%202026-08-18%20at%2011.33.52%20AM.mpeg" type="audio/mpeg" />
+                    Your browser does not support audio playback.
+                  </audio>
+                  <div class="resource-card-actions">
+                    <a href="resourses/WhatsApp%20Audio%202026-08-18%20at%2011.33.52%20AM.mpeg" download="UMPA_Anthem.mpeg" class="btn-resource-download" style="width: 100%; justify-content: center;">
+                      <i class="fa-solid fa-download"></i> Download Audio
+                    </a>
+                  </div>
+                </div>
+              </article>
+            </div>            </div>
+            <p class="events-portal-empty" id="resourcesPortalEmpty" hidden style="text-align: center; color: #64748b; padding: 2rem;">No resources in this category yet.</p>
+          </div>
+        </section>
+        
+</main>
+<!-- FOOTER -->
+<footer class="footer-wrap">
+  <section class="footer-bar">
+    <div class="footer-inner">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about-us.html">About Us</a></li>
+            <li><a href="about-us.html#programs">Programs</a></li>
+            <li><a href="upcoming-events.html">Events &amp; Gallery</a></li>
+            <li><a href="resources.html">Resources</a></li>
+            <li><a href="join-club.html">Get Involved</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Follow Us</h4>
+          <ul>
+            <li><a class="social-link" href="https://www.facebook.com/profile.php?id=100064422140843&amp;mibextid=rS40aB7S9Ucbxw6v" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-facebook"></i> Facebook</a></li>
+            <li><a class="social-link" href="https://x.com/ProlifeUmpa" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-x-twitter"></i> Twitter</a></li>
+            <li><a class="social-link" href="https://www.youtube.com/channel/UC00grETNPLlj9aXZJGh-7sA" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-youtube"></i> YouTube</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Contact Info</h4>
+          <p><strong>Email:</strong> <a href="mailto:prolife.klarch@yahoo.com">prolife.klarch@yahoo.com</a></p>
+          <p><strong>Phone:</strong> <a href="tel:+256785566505">+256 785 566505</a></p>
+          <p><strong>Location:</strong> <a href="contact.html">Kampala, Uganda</a></p>
+          <p><a href="contact.html" class="footer-cta-link">Contact Us →</a></p>
+        </div>
+        <div class="footer-col">
+          <h4>Newsletter</h4>
+          <p>Get updates on our programs, events, and pro-life news delivered to your inbox.</p>
+          <form class="newsletter-form" action="https://formsubmit.co/prolife.klarch@yahoo.com" method="POST">
+            <input type="email" name="email" required placeholder="Enter your email" autocomplete="email" />
+            <button type="submit">Subscribe</button>
+          </form>
+          <div class="newsletter-form-status" id="sub-msg" role="status" hidden>✓ Thank you for subscribing!</div>
+        </div>
+      </div>
+      <div class="footer-bottom-wrap">
+        <p>© 2026 UMPA Uganda Martyrs Pro-life Apostolate. All rights reserved.</p>
+        <div class="footer-bottom-links">
+          <a href="#">Disclaimer</a> |
+          <a href="contact.html">Contact</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</footer>
+
+<!-- RESOURCE DOCUMENT PREVIEW MODAL -->
+<div class="resources-pdf-modal" id="resourcesPdfModal" role="dialog" aria-modal="true" aria-labelledby="resourcesModalTitle">
+  <div class="resources-pdf-modal__backdrop"></div>
+  <div class="resources-pdf-modal__dialog">
+    <header class="resources-pdf-modal__header">
+      <div class="resources-pdf-modal__header-left">
+        <span class="resources-pdf-modal__badge" id="resourcesModalBadge"><i class="fa-solid fa-file-pdf"></i> Document</span>
+        <h3 class="resources-pdf-modal__title" id="resourcesModalTitle">Document Preview</h3>
+      </div>
+      <button type="button" class="resources-pdf-modal__close" aria-label="Close document viewer">&times;</button>
+    </header>
+    <div class="resources-pdf-modal__body">
+      <div class="resources-pdf-modal__loading" style="display:none;">
+        <div class="resources-pdf-modal__spinner"></div>
+        <p>Loading document preview…</p>
+      </div>
+      <canvas class="resources-pdf-modal__canvas" style="display:none;"></canvas>
+      <img class="resources-pdf-modal__image" style="display:none;" alt="Document preview" />
+      <iframe class="resources-pdf-modal__frame" style="display:none;" title="Document preview"></iframe>
+    </div>
+    <footer class="resources-pdf-modal__footer">
+      <div class="resources-pdf-modal__controls">
+        <div class="resources-pdf-modal__nav">
+          <button type="button" class="resources-pdf-modal__prev" aria-label="Previous page" title="Previous page"><i class="fa-solid fa-chevron-left"></i></button>
+          <span class="resources-pdf-modal__page-label">Page 1 of 1</span>
+          <button type="button" class="resources-pdf-modal__next" aria-label="Next page" title="Next page"><i class="fa-solid fa-chevron-right"></i></button>
+        </div>
+        <div class="resources-pdf-modal__zoom">
+          <button type="button" class="resources-pdf-modal__zoom-out" aria-label="Zoom out" title="Zoom out"><i class="fa-solid fa-magnifying-glass-minus"></i></button>
+          <button type="button" class="resources-pdf-modal__zoom-in" aria-label="Zoom in" title="Zoom in"><i class="fa-solid fa-magnifying-glass-plus"></i></button>
+          <button type="button" class="resources-pdf-modal__zoom-reset" aria-label="Reset zoom" title="Reset zoom"><i class="fa-solid fa-arrows-rotate"></i></button>
+        </div>
+      </div>
+      <div class="resources-pdf-modal__actions">
+        <a class="resources-pdf-modal__download" download><i class="fa-solid fa-download"></i> Download Document</a>
+        <a class="resources-pdf-modal__newtab" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-arrow-up-right-from-square"></i> Open in New Tab</a>
+      </div>
+    </footer>
+  </div>
+</div>
+
+<script src="js/script.js" defer></script>
+<script>
+(function () {
+  var modal = null;
+  var canvasEl, imgEl, frameEl, titleEl, badgeEl, pageLabelEl, downloadEl, newTabEl, loadingEl, navEl, zoomEl;
+  var currentDoc = null;
+  var currentPage = 1;
+  var currentScale = 1.15;
+  var minScale = 0.6;
+  var maxScale = 2.5;
+
+  if (typeof pdfjsLib !== 'undefined') {
+    try {
+      if (window.location.protocol === 'file:') {
+        // Under file://, avoid cross-origin Web Worker blocks
+        pdfjsLib.GlobalWorkerOptions.workerSrc = '';
+      } else {
+        pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js';
+      }
+    } catch (_) {}
+  }
+
+  function ensureModal() {
+    if (modal) return;
+    modal = document.getElementById('resourcesPdfModal');
+    if (!modal) {
+      modal = document.createElement('div');
+      modal.className = 'resources-pdf-modal';
+      modal.id = 'resourcesPdfModal';
+      modal.setAttribute('role', 'dialog');
+      modal.setAttribute('aria-modal', 'true');
+      modal.setAttribute('aria-labelledby', 'resourcesModalTitle');
+      modal.innerHTML =
+        '<div class="resources-pdf-modal__backdrop"></div>' +
+        '<div class="resources-pdf-modal__dialog">' +
+          '<header class="resources-pdf-modal__header">' +
+            '<div class="resources-pdf-modal__header-left">' +
+              '<span class="resources-pdf-modal__badge" id="resourcesModalBadge"><i class="fa-solid fa-file-pdf"></i> Document</span>' +
+              '<h3 class="resources-pdf-modal__title" id="resourcesModalTitle">Document Preview</h3>' +
+            '</div>' +
+            '<button type="button" class="resources-pdf-modal__close" aria-label="Close document viewer">&times;</button>' +
+          '</header>' +
+          '<div class="resources-pdf-modal__body">' +
+            '<div class="resources-pdf-modal__loading" style="display:none;">' +
+              '<div class="resources-pdf-modal__spinner"></div>' +
+              '<p>Loading document preview…</p>' +
+            '</div>' +
+            '<canvas class="resources-pdf-modal__canvas" style="display:none;"></canvas>' +
+            '<img class="resources-pdf-modal__image" style="display:none;" alt="Document preview" />' +
+            '<iframe class="resources-pdf-modal__frame" style="display:none;" title="Document preview"></iframe>' +
+          '</div>' +
+          '<footer class="resources-pdf-modal__footer">' +
+            '<div class="resources-pdf-modal__controls">' +
+              '<div class="resources-pdf-modal__nav">' +
+                '<button type="button" class="resources-pdf-modal__prev" aria-label="Previous page" title="Previous page"><i class="fa-solid fa-chevron-left"></i></button>' +
+                '<span class="resources-pdf-modal__page-label">Page 1 of 1</span>' +
+                '<button type="button" class="resources-pdf-modal__next" aria-label="Next page" title="Next page"><i class="fa-solid fa-chevron-right"></i></button>' +
+              '</div>' +
+              '<div class="resources-pdf-modal__zoom">' +
+                '<button type="button" class="resources-pdf-modal__zoom-out" aria-label="Zoom out" title="Zoom out"><i class="fa-solid fa-magnifying-glass-minus"></i></button>' +
+                '<button type="button" class="resources-pdf-modal__zoom-in" aria-label="Zoom in" title="Zoom in"><i class="fa-solid fa-magnifying-glass-plus"></i></button>' +
+                '<button type="button" class="resources-pdf-modal__zoom-reset" aria-label="Reset zoom" title="Reset zoom"><i class="fa-solid fa-arrows-rotate"></i></button>' +
+              '</div>' +
+            '</div>' +
+            '<div class="resources-pdf-modal__actions">' +
+              '<a class="resources-pdf-modal__download" download><i class="fa-solid fa-download"></i> Download Document</a>' +
+              '<a class="resources-pdf-modal__newtab" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-arrow-up-right-from-square"></i> Open in New Tab</a>' +
+            '</div>' +
+          '</footer>' +
+        '</div>';
+      document.body.appendChild(modal);
+    }
+
+    canvasEl = modal.querySelector('.resources-pdf-modal__canvas');
+    imgEl = modal.querySelector('.resources-pdf-modal__image');
+    frameEl = modal.querySelector('.resources-pdf-modal__frame');
+    titleEl = modal.querySelector('.resources-pdf-modal__title');
+    badgeEl = modal.querySelector('.resources-pdf-modal__badge');
+    pageLabelEl = modal.querySelector('.resources-pdf-modal__page-label');
+    downloadEl = modal.querySelector('.resources-pdf-modal__download');
+    newTabEl = modal.querySelector('.resources-pdf-modal__newtab');
+    loadingEl = modal.querySelector('.resources-pdf-modal__loading');
+    navEl = modal.querySelector('.resources-pdf-modal__nav');
+    zoomEl = modal.querySelector('.resources-pdf-modal__zoom');
+
+    modal.querySelector('.resources-pdf-modal__backdrop').addEventListener('click', closeModal);
+    modal.querySelector('.resources-pdf-modal__close').addEventListener('click', closeModal);
+    modal.querySelector('.resources-pdf-modal__prev').addEventListener('click', function () { renderPage(currentPage - 1); });
+    modal.querySelector('.resources-pdf-modal__next').addEventListener('click', function () { renderPage(currentPage + 1); });
+
+    modal.querySelector('.resources-pdf-modal__zoom-in').addEventListener('click', function () {
+      if (currentScale < maxScale) {
+        currentScale = Math.min(maxScale, currentScale + 0.25);
+        renderPage(currentPage);
+      }
+    });
+
+    modal.querySelector('.resources-pdf-modal__zoom-out').addEventListener('click', function () {
+      if (currentScale > minScale) {
+        currentScale = Math.max(minScale, currentScale - 0.25);
+        renderPage(currentPage);
+      }
+    });
+
+    modal.querySelector('.resources-pdf-modal__zoom-reset').addEventListener('click', function () {
+      currentScale = 1.15;
+      renderPage(currentPage);
+    });
+
+    document.addEventListener('keydown', function (e) {
+      if (!modal.classList.contains('is-open')) return;
+      if (e.key === 'Escape') closeModal();
+      if (e.key === 'ArrowLeft') renderPage(currentPage - 1);
+      if (e.key === 'ArrowRight') renderPage(currentPage + 1);
+    });
+  }
+
+  function fallbackToFrame(url) {
+    loadingEl.style.display = 'none';
+    canvasEl.style.display = 'none';
+    imgEl.style.display = 'none';
+    frameEl.src = url;
+    frameEl.style.display = 'block';
+    navEl.style.display = 'none';
+    zoomEl.style.display = 'none';
+    pageLabelEl.textContent = 'Document Viewer';
+  }
+
+  function openModal(url, title) {
+    ensureModal();
+    var cleanTitle = title || 'Document preview';
+    titleEl.textContent = cleanTitle;
+    var filename = cleanTitle.replace(/[^\w\s-]/g, '').trim().replace(/\s+/g, '_');
+    if (url.indexOf('.pdf') !== -1) filename += '.pdf';
+    else if (url.indexOf('.jpeg') !== -1 || url.indexOf('.jpg') !== -1) filename += '.jpg';
+    else if (url.indexOf('.png') !== -1) filename += '.png';
+
+    downloadEl.setAttribute('href', url);
+    downloadEl.setAttribute('download', filename);
+    newTabEl.setAttribute('href', url);
+
+    modal.classList.add('is-open');
+    document.body.classList.add('resources-pdf-modal-open');
+
+    // Reset components
+    canvasEl.style.display = 'none';
+    imgEl.style.display = 'none';
+    frameEl.style.display = 'none';
+    frameEl.src = '';
+    loadingEl.style.display = 'flex';
+    navEl.style.display = 'none';
+    zoomEl.style.display = 'none';
+    currentDoc = null;
+    currentPage = 1;
+    currentScale = 1.15;
+
+    // Image document preview
+    if (/\.(jpe?g|png|webp|gif)($|\?)/i.test(url)) {
+      badgeEl.innerHTML = '<i class="fa-solid fa-image"></i> Visual Guide';
+      imgEl.src = url;
+      imgEl.onload = function () {
+        loadingEl.style.display = 'none';
+        imgEl.style.display = 'block';
+        pageLabelEl.textContent = 'Visual Preview';
+      };
+      imgEl.onerror = function () {
+        fallbackToFrame(url);
+      };
+      return;
+    }
+
+    // PDF document preview
+    badgeEl.innerHTML = '<i class="fa-solid fa-file-pdf"></i> PDF Document';
+    if (typeof pdfjsLib !== 'undefined') {
+      try {
+        pdfjsLib.getDocument(url).promise.then(function (pdf) {
+          currentDoc = pdf;
+          loadingEl.style.display = 'none';
+          canvasEl.style.display = 'block';
+          navEl.style.display = 'flex';
+          zoomEl.style.display = 'flex';
+          renderPage(1);
+        }).catch(function (err) {
+          console.warn('PDF.js rendering could not load document; using browser embed fallback:', err);
+          fallbackToFrame(url);
+        });
+      } catch (e) {
+        fallbackToFrame(url);
+      }
+    } else {
+      fallbackToFrame(url);
+    }
+  }
+
+  function renderPage(num) {
+    if (!currentDoc || num < 1 || num > currentDoc.numPages) return;
+    currentPage = num;
+    currentDoc.getPage(num).then(function (page) {
+      var body = modal.querySelector('.resources-pdf-modal__body');
+      var containerWidth = Math.max(300, (body.clientWidth || 800) - 48);
+      var viewport = page.getViewport({ scale: 1 });
+      var baseScale = Math.min(containerWidth / viewport.width, 1.4);
+      var effectiveScale = baseScale * currentScale;
+      var scaledViewport = page.getViewport({ scale: effectiveScale });
+
+      canvasEl.width = scaledViewport.width;
+      canvasEl.height = scaledViewport.height;
+      var ctx = canvasEl.getContext('2d');
+      page.render({ canvasContext: ctx, viewport: scaledViewport });
+      pageLabelEl.textContent = 'Page ' + num + ' of ' + currentDoc.numPages;
+    });
+  }
+
+  function closeModal() {
+    if (!modal) return;
+    modal.classList.remove('is-open');
+    document.body.classList.remove('resources-pdf-modal-open');
+    if (frameEl) frameEl.src = '';
+  }
+
+  // Renders the first page of the PDF as a visual cover thumbnail
+  function buildThumbnail(cardMedia, url) {
+    if (!url || typeof pdfjsLib === 'undefined' || !/\.pdf($|\?)/i.test(url)) return;
+    try {
+      pdfjsLib.getDocument(url).promise.then(function (pdf) {
+        return pdf.getPage(1).then(function (page) {
+          var viewport = page.getViewport({ scale: 1 });
+          var scale = 440 / viewport.width;
+          var scaledViewport = page.getViewport({ scale: scale });
+          var canvas = document.createElement('canvas');
+          canvas.className = 'resources-thumb-canvas';
+          canvas.width = scaledViewport.width;
+          canvas.height = scaledViewport.height;
+          var ctx = canvas.getContext('2d');
+          return page.render({ canvasContext: ctx, viewport: scaledViewport }).promise.then(function () {
+            var existing = cardMedia.querySelector('.resources-thumb-canvas');
+            if (existing) existing.remove();
+            cardMedia.appendChild(canvas);
+
+            var article = cardMedia.closest('article');
+            var metaP = article ? article.querySelector('.resource-doc-cover__meta') : null;
+            if (metaP) {
+              metaP.textContent = pdf.numPages + (pdf.numPages === 1 ? ' page' : ' pages') + ' • PDF';
+            }
+          });
+        });
+      }).catch(function (_) {
+        // Fallback: The handsome CSS cover remains visibly present!
+      });
+    } catch (_) {}
+  }
+
+  function initResourcesViewer() {
+    ensureModal();
+
+    // Generate visible thumbnails for any PDF cards
+    document.querySelectorAll('#resourcesPortalGrid .resources-portal-card').forEach(function (card) {
+      var media = card.querySelector('.events-portal-card__media');
+      var previewBtn = card.querySelector('.btn-resource-preview');
+      var docUrl = (media && media.getAttribute('data-doc-url')) || (previewBtn && previewBtn.getAttribute('data-doc-url'));
+
+      if (media && docUrl && /\.pdf($|\?)/i.test(docUrl)) {
+        if (!media.querySelector('.resources-thumb-canvas')) {
+          buildThumbnail(media, docUrl);
+        }
+      }
+    });
+
+    // Make viewer accessible globally for dynamic content
+    window.openResourceDocModal = openModal;
+    window.initResourcesViewer = initResourcesViewer;
+  }
+
+  // Delegated event listener for all preview triggers (works with static & dynamic cards)
+  document.addEventListener('click', function (e) {
+    var previewBtn = e.target.closest('.btn-resource-preview');
+    if (previewBtn) {
+      e.preventDefault();
+      var docUrl = previewBtn.getAttribute('data-doc-url');
+      var docTitle = previewBtn.getAttribute('data-doc-title') || 'Document';
+      if (docUrl) openModal(docUrl, docTitle);
+      return;
+    }
+
+    var media = e.target.closest('.events-portal-card__media[data-doc-url]');
+    if (media && !e.target.closest('a') && !e.target.closest('audio') && !e.target.closest('button')) {
+      if (e.metaKey || e.ctrlKey || e.button === 1) return;
+      e.preventDefault();
+      var docUrl = media.getAttribute('data-doc-url');
+      var docTitle = media.getAttribute('data-doc-title') || 'Document';
+      if (docUrl) openModal(docUrl, docTitle);
+      return;
+    }
+
+    var titleEl = e.target.closest('.resources-portal-card h3');
+    if (titleEl) {
+      var card = titleEl.closest('.resources-portal-card');
+      var m = card ? card.querySelector('.events-portal-card__media[data-doc-url]') : null;
+      if (m) {
+        var docUrl = m.getAttribute('data-doc-url');
+        var docTitle = m.getAttribute('data-doc-title') || titleEl.textContent;
+        if (docUrl) {
+          e.preventDefault();
+          openModal(docUrl, docTitle);
+        }
+      }
+    }
+  });
+
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Enter' || e.key === ' ') {
+      var media = document.activeElement && document.activeElement.closest('.events-portal-card__media[data-doc-url]');
+      if (media) {
+        e.preventDefault();
+        var docUrl = media.getAttribute('data-doc-url');
+        var docTitle = media.getAttribute('data-doc-title') || 'Document';
+        if (docUrl) openModal(docUrl, docTitle);
+      }
+    }
+  });
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initResourcesViewer);
+  } else {
+    initResourcesViewer();
+  }
+})();
+</script>
+</body>
+</html>
